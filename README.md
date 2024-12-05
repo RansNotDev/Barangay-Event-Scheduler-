@@ -65,7 +65,7 @@ Configure the Project
 
 Update database credentials in config.php:
 php
-Copy code
+
 define('DB_SERVER', 'localhost');
 define('DB_USERNAME', 'root');
 define('DB_PASSWORD', '');
@@ -89,26 +89,7 @@ Search for events by name, date, or location.
 Request for room availability or scheduling.
 Folder Structure
 bash
-Copy code
-barangay-event-scheduler/
-│
-├── db/
-│   └── barangay_scheduler.sql   # Database schema and sample data
-├── classes/
-│   └── Master.php               # Core backend logic
-├── config.php                   # Database configuration
-├── index.php                    # Landing page
-├── assets/
-│   ├── css/                     # Custom styles
-│   ├── js/                      # Custom scripts
-│   └── images/                  # Application images
-├── schedules/
-│   ├── add_schedule.php         # Add event form
-│   ├── edit_schedule.php        # Edit event form
-│   └── list_schedules.php       # List of all events
-├── canceled/
-│   └── list_canceled.php        # List of canceled events
-└── README.md                    # Project documentation
+ 
 API Endpoints
 Master.php (Main Actions)
 Save Schedule
@@ -117,7 +98,7 @@ URL: classes/Master.php?f=save_schedule
 Method: POST
 Payload:
 json
-Copy code
+
 {
   "room_name": "Main Hall",
   "datetime_start": "2024-12-05 09:00:00",
@@ -130,7 +111,7 @@ URL: classes/Master.php?f=delete_sched
 Method: POST
 Payload:
 json
-Copy code
+
 {
   "id": 123
 }
